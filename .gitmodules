@@ -1,0 +1,3 @@
+[submodule "Cactus/third-party-libs/spdlog"]
+	path = Cactus/third-party-libs/spdlog
+	url = https://github.com/gabime/spdlog

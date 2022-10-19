@@ -1,6 +1,7 @@
 #include "Application.h"
 
 namespace Cactus {
+
 	Application::Application() {}
 
 	Application::~Application() {}
@@ -8,4 +9,5 @@ namespace Cactus {
 	void Application::Run() {
 		while (true);
 	}
+
 }

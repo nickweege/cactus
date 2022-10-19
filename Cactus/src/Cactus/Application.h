@@ -3,6 +3,7 @@
 #include "Core.h"
 
 namespace Cactus {
+
 	class Application {
 	public:
 		Application();
@@ -11,4 +12,5 @@ namespace Cactus {
 	};
 
 	Application* CreateApplication();
+
 }

@@ -3,13 +3,9 @@
 
 class Sandbox : public Cactus::Application {
 public:
-	Sandbox() {
+	Sandbox() {}
 
-	}
-
-	~Sandbox() {
-
-	}
+	~Sandbox() {}
 };
 
 Cactus::Application* Cactus::CreateApplication() {
