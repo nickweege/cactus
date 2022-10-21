@@ -6,14 +6,14 @@ workspace "Cactus"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-project "Cactus"
-   location "Cactus"
+project "cactus"
+   location "cactus"
    kind "StaticLib"
    language "C++"
    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
    files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
-   includedirs { "%{prj.name}/vendor/spdlog/include" }
+   includedirs { "%{prj.name}/third-party-libs/spdlog/include" }
 
    filter "system:windows"
       cppdialect "C++17"
@@ -33,15 +33,15 @@ project "Cactus"
       defines "CACTUS_DIST"
       optimize "On"
 
-project "Sandbox"
-   location "Sandbox"
+project "blockits"
+   location "blockits"
    kind "ConsoleApp"
    language "C++"
    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
    files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
-   includedirs { "Cactus/vendor/spdlog/include", "Cactus/src" }
-   links { "Cactus" }
+   includedirs { "cactus/third-party-libs/spdlog/include", "cactus/src" }
+   links { "cactus" }
 
    filter "system:windows"
       cppdialect "C++17"

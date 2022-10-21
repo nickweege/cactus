@@ -15,10 +15,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{48363CAB-34D8-6681-1D93-7AD509D4EDD1}</ProjectGuid>
+    <ProjectGuid>{684AE1F5-54EC-0BCC-3DA7-1F2029E8921C}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Cactus</RootNamespace>
+    <RootNamespace>cactus</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -54,21 +54,21 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\bin\Debug-windows-x86_64\Cactus\</OutDir>
-    <IntDir>..\bin-int\Debug-windows-x86_64\Cactus\</IntDir>
-    <TargetName>Cactus</TargetName>
+    <OutDir>..\bin\Debug-windows-x86_64\cactus\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86_64\cactus\</IntDir>
+    <TargetName>cactus</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\bin\Release-windows-x86_64\Cactus\</OutDir>
-    <IntDir>..\bin-int\Release-windows-x86_64\Cactus\</IntDir>
-    <TargetName>Cactus</TargetName>
+    <OutDir>..\bin\Release-windows-x86_64\cactus\</OutDir>
+    <IntDir>..\bin-int\Release-windows-x86_64\cactus\</IntDir>
+    <TargetName>cactus</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
-    <OutDir>..\bin\Dist-windows-x86_64\Cactus\</OutDir>
-    <IntDir>..\bin-int\Dist-windows-x86_64\Cactus\</IntDir>
-    <TargetName>Cactus</TargetName>
+    <OutDir>..\bin\Dist-windows-x86_64\cactus\</OutDir>
+    <IntDir>..\bin-int\Dist-windows-x86_64\cactus\</IntDir>
+    <TargetName>cactus</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -76,7 +76,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CACTUS_WINDOWS_PLATFORM;CACTUS_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>third-party-libs\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -92,7 +92,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CACTUS_WINDOWS_PLATFORM;CACTUS_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>third-party-libs\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -112,7 +112,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CACTUS_WINDOWS_PLATFORM;CACTUS_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>third-party-libs\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -128,15 +128,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Cactus.h" />
-    <ClInclude Include="src\Cactus\Application.h" />
-    <ClInclude Include="src\Cactus\Core.h" />
-    <ClInclude Include="src\Cactus\EntryPoint.h" />
-    <ClInclude Include="src\Cactus\Log.h" />
+    <ClInclude Include="src\cactus.h" />
+    <ClInclude Include="src\cactus\application.h" />
+    <ClInclude Include="src\cactus\core.h" />
+    <ClInclude Include="src\cactus\entry_point.h" />
+    <ClInclude Include="src\cactus\log.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Cactus\Application.cpp" />
-    <ClCompile Include="src\Cactus\Log.cpp" />
+    <ClCompile Include="src\cactus\application.cpp" />
+    <ClCompile Include="src\cactus\log.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

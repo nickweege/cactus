@@ -1,12 +1,12 @@
-#include "Application.h"
+#include "application.h"
 
-namespace Cactus {
+namespace cactus {
 
-	Application::Application() {}
+	application::application() {}
 
-	Application::~Application() {}
+	application::~application() {}
 
-	void Application::Run() {
+	void application::run() {
 		while (true);
 	}
 

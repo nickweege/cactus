@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Cactus/Application.h"
-#include "Cactus/Log.h"
+#include "cactus/application.h"
+#include "cactus/log.h"
 
 // Entry Point
-#include "Cactus/EntryPoint.h"
+#include "cactus/entry_point.h"

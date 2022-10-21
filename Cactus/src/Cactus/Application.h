@@ -1,16 +1,16 @@
 #pragma once
 
-#include "Core.h"
+#include "core.h"
 
-namespace Cactus {
+namespace cactus {
 
-	class Application {
+	class application {
 	public:
-		Application();
-		virtual ~Application();
-		void Run();
+		application();
+		virtual ~application();
+		void run();
 	};
 
-	Application* CreateApplication();
+	application* create_application();
 
 }
