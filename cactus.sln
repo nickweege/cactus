@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blockits", "blockits\blockits.vcxproj", "{E0FBA070-CCC8-FB7B-F5E1-E923E10D310A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cactus", "cactus\cactus.vcxproj", "{684AE1F5-54EC-0BCC-3DA7-1F2029E8921C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		debug|x64 = debug|x64
+		dist|x64 = dist|x64
+		release|x64 = release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0FBA070-CCC8-FB7B-F5E1-E923E10D310A}.debug|x64.ActiveCfg = debug|x64
+		{E0FBA070-CCC8-FB7B-F5E1-E923E10D310A}.debug|x64.Build.0 = debug|x64
+		{E0FBA070-CCC8-FB7B-F5E1-E923E10D310A}.dist|x64.ActiveCfg = dist|x64
+		{E0FBA070-CCC8-FB7B-F5E1-E923E10D310A}.dist|x64.Build.0 = dist|x64
+		{E0FBA070-CCC8-FB7B-F5E1-E923E10D310A}.release|x64.ActiveCfg = release|x64
+		{E0FBA070-CCC8-FB7B-F5E1-E923E10D310A}.release|x64.Build.0 = release|x64
+		{684AE1F5-54EC-0BCC-3DA7-1F2029E8921C}.debug|x64.ActiveCfg = debug|x64
+		{684AE1F5-54EC-0BCC-3DA7-1F2029E8921C}.debug|x64.Build.0 = debug|x64
+		{684AE1F5-54EC-0BCC-3DA7-1F2029E8921C}.dist|x64.ActiveCfg = dist|x64
+		{684AE1F5-54EC-0BCC-3DA7-1F2029E8921C}.dist|x64.Build.0 = dist|x64
+		{684AE1F5-54EC-0BCC-3DA7-1F2029E8921C}.release|x64.ActiveCfg = release|x64
+		{684AE1F5-54EC-0BCC-3DA7-1F2029E8921C}.release|x64.Build.0 = release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

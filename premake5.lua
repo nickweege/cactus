@@ -1,8 +1,8 @@
 -- premake5.lua
 
-workspace "Cactus"
+workspace "cactus"
    architecture "x64"
-   configurations { "Debug", "Release", "Dist" }
+   configurations { "debug", "release", "dist" }
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
@@ -21,15 +21,15 @@ project "cactus"
       systemversion "latest"
       defines { "CACTUS_WINDOWS_PLATFORM" }
 
-   filter "configurations:Debug"
+   filter "configurations:debug"
       defines "CACTUS_DEBUG"
       symbols "On"
 
-   filter "configurations:Release"
+   filter "configurations:release"
       defines "CACTUS_RELEASE"
       optimize "On"
 
-   filter "configurations:Dist"
+   filter "configurations:dist"
       defines "CACTUS_DIST"
       optimize "On"
 
@@ -49,14 +49,14 @@ project "blockits"
       systemversion "latest"
       defines { "CACTUS_WINDOWS_PLATFORM" }
 
-   filter "configurations:Debug"
+   filter "configurations:debug"
       defines "CACTUS_DEBUG"
       symbols "On"
 
-   filter "configurations:Release"
+   filter "configurations:release"
       defines "CACTUS_RELEASE"
       optimize "On"
 
-   filter "configurations:Dist"
+   filter "configurations:dist"
       defines "CACTUS_DIST"
       optimize "On"
