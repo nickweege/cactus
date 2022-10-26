@@ -6,6 +6,7 @@ workspace "cactus"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- CACTUS Engine Project's Configurations
 project "cactus"
    location "cactus"
    kind "StaticLib"
@@ -13,7 +14,7 @@ project "cactus"
    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
    files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
-   includedirs { "%{prj.name}/third-party-libs/spdlog/include" }
+   includedirs { "%{prj.name}/src", "%{prj.name}/third-party-libs/spdlog/include" }
 
    filter "system:windows"
       cppdialect "C++17"
@@ -32,7 +33,8 @@ project "cactus"
    filter "configurations:dist"
       defines "CACTUS_DIST"
       optimize "On"
-
+ 
+-- BLOCKITS Project's Configurations
 project "blockits"
    location "blockits"
    kind "ConsoleApp"
@@ -40,7 +42,7 @@ project "blockits"
    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
    files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
-   includedirs { "cactus/third-party-libs/spdlog/include", "cactus/src" }
+   includedirs { "cactus/src", "cactus/third-party-libs/spdlog/include" }
    links { "cactus" }
 
    filter "system:windows"

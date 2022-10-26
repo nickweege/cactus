@@ -1,7 +1,9 @@
 #pragma once
 
-#include "spdlog/spdlog.h"
 #include <memory>
+#include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
+#include "core.h"
 
 namespace cactus {
 
@@ -15,7 +17,6 @@ namespace cactus {
 		static std::shared_ptr<spdlog::logger> s_core_logger;
 		static std::shared_ptr<spdlog::logger> s_client_logger;
 	};
-
 }
 
 // Core log macros
