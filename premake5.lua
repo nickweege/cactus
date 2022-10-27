@@ -15,6 +15,8 @@ project "cactus"
    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
    files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
    includedirs { "%{prj.name}/src", "%{prj.name}/third-party-libs/spdlog/include" }
+   pchheader "cactuspch.h"
+   pchsource "%{prj.name}/src/cactuspch.cpp"
 
    filter "system:windows"
       cppdialect "C++17"

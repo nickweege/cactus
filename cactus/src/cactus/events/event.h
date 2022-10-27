@@ -1,5 +1,6 @@
 #pragma once
 
+#include "cactuspch.h"
 #include "cactus/core.h"
 
 namespace cactus {
@@ -56,5 +57,5 @@ namespace cactus {
 		event& m_event;
 	};
 
-	inline std::ostream& operator<<(std::ostream& os, const event& event) { return os << event.to_string(); }
+	inline std::ostream& operator<<(std::ostream& os, const event& e) { return os << e.to_string(); }
 }

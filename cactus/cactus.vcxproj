@@ -73,7 +73,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>cactuspch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CACTUS_WINDOWS_PLATFORM;CACTUS_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;third-party-libs\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -89,7 +90,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>cactuspch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CACTUS_WINDOWS_PLATFORM;CACTUS_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;third-party-libs\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -109,7 +111,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='dist|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>cactuspch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CACTUS_WINDOWS_PLATFORM;CACTUS_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;third-party-libs\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -137,10 +140,14 @@
     <ClInclude Include="src\cactus\events\key_event.h" />
     <ClInclude Include="src\cactus\events\mouse_event.h" />
     <ClInclude Include="src\cactus\log.h" />
+    <ClInclude Include="src\cactuspch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cactus\application.cpp" />
     <ClCompile Include="src\cactus\log.cpp" />
+    <ClCompile Include="src\cactuspch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

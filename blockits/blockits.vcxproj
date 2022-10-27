@@ -135,7 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\cactus\cactus.vcxproj">
-      <Project>{684AE1F5-54EC-0BCC-3DA7-1F2029E8921C}</Project>
+      <Project>{684ae1f5-54ec-0bcc-3da7-1f2029e8921c}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

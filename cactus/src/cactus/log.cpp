@@ -1,8 +1,8 @@
-#include "log.h"
+#include "cactuspch.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
 
 namespace cactus {
-
+	
 	std::shared_ptr<spdlog::logger> log::s_core_logger;
 	std::shared_ptr<spdlog::logger> log::s_client_logger;
 

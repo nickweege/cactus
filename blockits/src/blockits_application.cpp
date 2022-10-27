@@ -1,4 +1,3 @@
-#include <iostream>
 #include "cactus.h"
 
 class application : public cactus::application {
