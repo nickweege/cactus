@@ -3,5 +3,5 @@
 #include "cactus/application.h"
 #include "cactus/log.h"
 
-// Entry Point
+// entry point
 #include "cactus/entry_point.h"

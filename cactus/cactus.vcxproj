@@ -141,6 +141,7 @@
     <ClInclude Include="src\cactus\events\mouse_event.h" />
     <ClInclude Include="src\cactus\log.h" />
     <ClInclude Include="src\cactuspch.h" />
+    <ClInclude Include="src\cactus\window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cactus\application.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="src\cactuspch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\cactus\window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

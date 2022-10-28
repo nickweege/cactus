@@ -17,4 +17,6 @@
 
 #ifdef CACTUS_WINDOWS_PLATFORM
 	#include <Windows.h>
+	#include <windows.h>
+	#include <windowsx.h>
 #endif

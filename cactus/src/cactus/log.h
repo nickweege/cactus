@@ -18,14 +18,14 @@ namespace cactus {
 	};
 }
 
-// Core log macros
+// core log macros
 #define CACTUS_CORE_TRACE(...)    ::cactus::log::get_core_logger()->trace(__VA_ARGS__)
 #define CACTUS_CORE_INFO(...)     ::cactus::log::get_core_logger()->info(__VA_ARGS__)
 #define CACTUS_CORE_WARN(...)     ::cactus::log::get_core_logger()->warn(__VA_ARGS__)
 #define CACTUS_CORE_ERROR(...)    ::cactus::log::get_core_logger()->error(__VA_ARGS__)
 #define CACTUS_CORE_FATAL(...)    ::cactus::log::get_core_logger()->critical(__VA_ARGS__)
 
-// Client log macros
+// client log macros
 #define CACTUS_TRACE(...)         ::cactus::log::get_client_logger()->trace(__VA_ARGS__)
 #define CACTUS_INFO(...)          ::cactus::log::get_client_logger()->info(__VA_ARGS__)
 #define CACTUS_WARN(...)          ::cactus::log::get_client_logger()->warn(__VA_ARGS__)
