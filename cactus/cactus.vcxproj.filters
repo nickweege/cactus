@@ -7,6 +7,12 @@
     <Filter Include="cactus\events">
       <UniqueIdentifier>{6C452387-D805-9FBD-A140-E83A0DC0E399}</UniqueIdentifier>
     </Filter>
+    <Filter Include="platform">
+      <UniqueIdentifier>{4A63C33C-3630-1E48-5F49-0CF04B7553D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform\windows">
+      <UniqueIdentifier>{A44FC440-9048-E392-B97A-C817A5D2C29E}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\cactus.h" />
@@ -34,8 +40,13 @@
     <ClInclude Include="src\cactus\log.h">
       <Filter>cactus</Filter>
     </ClInclude>
+    <ClInclude Include="src\cactus\window.h">
+      <Filter>cactus</Filter>
+    </ClInclude>
     <ClInclude Include="src\cactuspch.h" />
-    <ClInclude Include="src\cactus\window.h" />
+    <ClInclude Include="src\platform\windows\windows_window.h">
+      <Filter>platform\windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cactus\application.cpp">
@@ -45,6 +56,8 @@
       <Filter>cactus</Filter>
     </ClCompile>
     <ClCompile Include="src\cactuspch.cpp" />
-    <ClCompile Include="src\cactus\window.cpp" />
+    <ClCompile Include="src\platform\windows\windows_window.cpp">
+      <Filter>platform\windows</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

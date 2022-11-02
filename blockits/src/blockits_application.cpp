@@ -1,12 +1,12 @@
 #include "cactus.h"
 
-class application : public cactus::application {
+class blockits_application : public cactus::application {
 public:
-	application() {}
+	blockits_application() {}
 
-	~application() {}
+	~blockits_application() {}
 };
 
 cactus::application* cactus::create_application() {
-	return new application();
+	return new blockits_application();
 }

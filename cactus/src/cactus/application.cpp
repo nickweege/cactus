@@ -1,19 +1,18 @@
 #include "cactuspch.h"
 #include "application.h"
-#include "events/application_event.h"
+#include "platform/windows/windows_window.h"
 
 namespace cactus {
 
-	application::application() {}
+	application::application() {
+		m_window = std::unique_ptr<window>(window::create());
+	}
 
 	application::~application() {}
 
 	void application::run() {
-		log::init();
-
-		window_resize_event e(1280, 720);
-		CACTUS_TRACE(e);
-
-		while (true);
+		while (m_running) {
+			m_window->on_update();
+		}
 	}
 }
