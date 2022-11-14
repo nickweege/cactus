@@ -15,5 +15,4 @@ namespace cactus {
 		s_core_logger->set_level(spdlog::level::trace);
 		s_client_logger->set_level(spdlog::level::trace);
 	}
-
 }

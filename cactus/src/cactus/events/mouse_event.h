@@ -39,37 +39,37 @@ namespace cactus {
 
 	class mouse_moved_event : public event {
 	public:
-		mouse_moved_event(float x_pos, float y_pos) : m_x_pos(x_pos), m_y_pos(y_pos) {}
-		inline float get_mouse_x() const { return m_x_pos; }
-		inline float get_mouse_y() const { return m_y_pos; }
+		mouse_moved_event(float xpos, float ypos) : m_xpos(xpos), m_ypos(ypos) {}
+		inline float get_mouse_x() const { return m_xpos; }
+		inline float get_mouse_y() const { return m_ypos; }
 		EVENT_CLASS_TYPE(mouse_moved)
 		EVENT_CLASS_CATEGORY(mouse_category | input_category)
 
 		std::string to_string() const override {
 			std::stringstream log;
-			log << "mouse_moved_event: " << m_x_pos << ", " << m_y_pos;
+			log << "mouse_moved_event: x:" << m_xpos << ", y:" << m_ypos;
 			return log.str();
 		}
 	private:
-		float m_x_pos;
-		float m_y_pos;
+		float m_xpos;
+		float m_ypos;
 	};
 
 	class mouse_scrolled_event : public event {
 	public:
-		mouse_scrolled_event(float x_offset, float y_offset) : m_x_offset(x_offset), m_y_offset(y_offset) {}
-		inline float get_x_offset() const { return m_x_offset; }
-		inline float get_y_offset() const { return m_y_offset; }
+		mouse_scrolled_event(float xoffset, float yoffset) : m_xoffset(xoffset), m_yoffset(yoffset) {}
+		inline float get_x_offset() const { return m_xoffset; }
+		inline float get_y_offset() const { return m_yoffset; }
 		EVENT_CLASS_TYPE(mouse_scrolled)
 		EVENT_CLASS_CATEGORY(mouse_category | input_category)
 
 		std::string to_string() const override {
 			std::stringstream log;
-			log << "mouse_scrolled_event: " << m_x_offset << ", " << m_y_offset;
+			log << "mouse_scrolled_event: " << m_xoffset << ", " << m_yoffset;
 			return log.str();
 		}
 	private:
-		float m_x_offset;
-		float m_y_offset;
+		float m_xoffset;
+		float m_yoffset;
 	};
 }
