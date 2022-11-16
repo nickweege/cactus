@@ -4,34 +4,50 @@
 
 namespace cactus {
 
-#define BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
+#define CACTUS_BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
 
 	application::application() {
 		log::init();
 		m_window = std::unique_ptr<window>(window::create());
-		m_window->set_event_callbak(BIND_EVENT_FN(application::on_event));
+		m_window->set_event_callbak(CACTUS_BIND_EVENT_FN(application::on_event));
 	}
 
 	application::~application() {}
 
-	void application::on_event(event& e) {
-		event_dispatcher dispatcher(e);
+	void application::on_event(event& event) {
+		event_dispatcher dispatcher(event);
+		dispatcher.dispatch<window_close_event>(CACTUS_BIND_EVENT_FN(application::on_window_close));
+		dispatcher.dispatch<window_resize_event>(CACTUS_BIND_EVENT_FN(application::on_window_resize));
 
-		dispatcher.dispatch<window_close_event>(BIND_EVENT_FN(application::on_window_close));
-
-		CACTUS_CORE_TRACE("{0}", e);
+		for (auto it = m_layer_stack.end(); it != m_layer_stack.begin();) {
+			(*--it)->on_event(event);
+			if (event.m_handled) break;
+		}
 	}
 
 	void application::run() {
 		while (m_running) {
 			glClearColor(1, 1, 1, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
+
+			for (layer* layer : m_layer_stack) layer->on_update();
+
 			m_window->on_update();
 		}
+	}
+
+	void application::push_layer(layer* layer) {
+		m_layer_stack.push_layer(layer);
+	}
+
+	void application::push_overlay(layer* overlay) {
+		m_layer_stack.push_overlay(overlay);
 	}
 
 	bool application::on_window_close(window_close_event& event) {
 		m_running = false;
 		return true;
 	}
+
+	bool application::on_window_resize(window_resize_event& event) { return true; }
 }

@@ -3,6 +3,7 @@
 #include "events/event.h"
 #include "events/application_event.h"
 #include "window.h"
+#include "layer_stack.h"
 
 namespace cactus {
 
@@ -12,9 +13,13 @@ namespace cactus {
 		virtual ~application();
 		void on_event(event& event);
 		void run();
+		void push_layer(layer* layer);
+		void push_overlay(layer* overlay);
 	private:
 		bool on_window_close(window_close_event& event);
+		bool on_window_resize(window_resize_event& event);
 		std::unique_ptr<window> m_window;
+		layer_stack m_layer_stack;
 		bool m_running = true;
 	};
 

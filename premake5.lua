@@ -24,7 +24,7 @@ project "cactus"
    pchsource "%{prj.name}/src/cactuspch.cpp"
 
    filter "system:windows"
-      buildoptions "/MDd"
+      -- buildoptions "/MDd"
       cppdialect "C++17"
       staticruntime "On"
       systemversion "latest"
@@ -32,14 +32,17 @@ project "cactus"
 
    filter "configurations:debug"
       defines "CACTUS_DEBUG"
+      buildoptions "/MDd"
       symbols "On"
 
    filter "configurations:release"
       defines "CACTUS_RELEASE"
+      buildoptions "/MD"
       optimize "On"
 
    filter "configurations:dist"
       defines "CACTUS_DIST"
+      buildoptions "/MD"
       optimize "On"
  
 -- BLOCKITS Project's Configurations
@@ -54,7 +57,7 @@ project "blockits"
    links { "cactus" }
 
    filter "system:windows"
-      buildoptions "/MDd"
+      -- buildoptions "/MDd"
       cppdialect "C++17"
       staticruntime "On"
       systemversion "latest"
@@ -62,12 +65,15 @@ project "blockits"
 
    filter "configurations:debug"
       defines "CACTUS_DEBUG"
+      buildoptions "/MDd"
       symbols "On"
 
    filter "configurations:release"
       defines "CACTUS_RELEASE"
+      buildoptions "/MD"
       optimize "On"
 
    filter "configurations:dist"
       defines "CACTUS_DIST"
+      buildoptions "/MD"
       optimize "On"

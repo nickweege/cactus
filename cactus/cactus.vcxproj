@@ -105,7 +105,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -130,7 +130,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -151,6 +151,8 @@
     <ClInclude Include="src\cactus\events\event.h" />
     <ClInclude Include="src\cactus\events\key_event.h" />
     <ClInclude Include="src\cactus\events\mouse_event.h" />
+    <ClInclude Include="src\cactus\layer.h" />
+    <ClInclude Include="src\cactus\layer_stack.h" />
     <ClInclude Include="src\cactus\log.h" />
     <ClInclude Include="src\cactus\window.h" />
     <ClInclude Include="src\cactuspch.h" />
@@ -158,6 +160,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cactus\application.cpp" />
+    <ClCompile Include="src\cactus\layer.cpp" />
+    <ClCompile Include="src\cactus\layer_stack.cpp" />
     <ClCompile Include="src\cactus\log.cpp" />
     <ClCompile Include="src\cactuspch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

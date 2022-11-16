@@ -37,6 +37,12 @@
     <ClInclude Include="src\cactus\events\mouse_event.h">
       <Filter>cactus\events</Filter>
     </ClInclude>
+    <ClInclude Include="src\cactus\layer.h">
+      <Filter>cactus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cactus\layer_stack.h">
+      <Filter>cactus</Filter>
+    </ClInclude>
     <ClInclude Include="src\cactus\log.h">
       <Filter>cactus</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cactus\application.cpp">
+      <Filter>cactus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cactus\layer.cpp">
+      <Filter>cactus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cactus\layer_stack.cpp">
       <Filter>cactus</Filter>
     </ClCompile>
     <ClCompile Include="src\cactus\log.cpp">

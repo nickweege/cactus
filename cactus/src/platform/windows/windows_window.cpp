@@ -121,7 +121,7 @@ namespace cactus {
 			}
 		});
 
-		CACTUS_CORE_INFO("GLFW window \"{0}\" created: ({1} x {2})", props.title, props.height, props.width);
+		CACTUS_CORE_INFO("GLFW window (\"{0}\" {1} x {2}) created", props.title, props.width, props.height);
 	}
 
 	void windows_window::shutdown() {

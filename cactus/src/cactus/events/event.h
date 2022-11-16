@@ -28,15 +28,14 @@ namespace cactus {
 	                           virtual const char* get_name() const override { return #type; }
 
 	class event {
-		friend class event_dispatcher;
 	public:
+		bool m_handled = false;
+
 		virtual event_type get_event_type() const = 0;
 		virtual int get_category_flags() const = 0;
 		virtual const char* get_name() const = 0;
 		virtual std::string to_string() const { return get_name(); }
 		inline bool is_in_category(event_category category) { return get_category_flags() & category; }
-	protected:
-		bool m_handled = false;
 	};
 
 	class event_dispatcher {
