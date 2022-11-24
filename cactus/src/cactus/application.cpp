@@ -1,6 +1,7 @@
 #include "cactuspch.h"
 #include "application.h"
 #include "platform/windows/windows_window.h"
+#include "glad/glad.h"
 
 namespace cactus {
 

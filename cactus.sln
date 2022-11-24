@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blockits", "blockits\blocki
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cactus", "cactus\cactus.vcxproj", "{684AE1F5-54EC-0BCC-3DA7-1F2029E8921C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glad", "cactus\third-party-libs\glad\glad.vcxproj", "{DD62977C-C999-980D-7286-7E105E9C140F}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfw", "cactus\third-party-libs\glfw\glfw.vcxproj", "{9563977C-819A-980D-2A87-7E10169D140F}"
 EndProject
 Global
@@ -26,6 +28,12 @@ Global
 		{684AE1F5-54EC-0BCC-3DA7-1F2029E8921C}.dist|x64.Build.0 = dist|x64
 		{684AE1F5-54EC-0BCC-3DA7-1F2029E8921C}.release|x64.ActiveCfg = release|x64
 		{684AE1F5-54EC-0BCC-3DA7-1F2029E8921C}.release|x64.Build.0 = release|x64
+		{DD62977C-C999-980D-7286-7E105E9C140F}.debug|x64.ActiveCfg = debug|x64
+		{DD62977C-C999-980D-7286-7E105E9C140F}.debug|x64.Build.0 = debug|x64
+		{DD62977C-C999-980D-7286-7E105E9C140F}.dist|x64.ActiveCfg = dist|x64
+		{DD62977C-C999-980D-7286-7E105E9C140F}.dist|x64.Build.0 = dist|x64
+		{DD62977C-C999-980D-7286-7E105E9C140F}.release|x64.ActiveCfg = release|x64
+		{DD62977C-C999-980D-7286-7E105E9C140F}.release|x64.Build.0 = release|x64
 		{9563977C-819A-980D-2A87-7E10169D140F}.debug|x64.ActiveCfg = debug|x64
 		{9563977C-819A-980D-2A87-7E10169D140F}.debug|x64.Build.0 = debug|x64
 		{9563977C-819A-980D-2A87-7E10169D140F}.dist|x64.ActiveCfg = dist|x64

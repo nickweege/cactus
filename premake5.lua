@@ -7,8 +7,11 @@ workspace "cactus"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
+IncludeDir["spdlog"] = "cactus/third-party-libs/spdlog/include"
 IncludeDir["glfw"] = "cactus/third-party-libs/glfw/include"
+IncludeDir["glad"] = "cactus/third-party-libs/glad/include"
 include "cactus/third-party-libs/glfw"
+include "cactus/third-party-libs/glad"
 
 -- CACTUS Engine Project's Configurations
 project "cactus"
@@ -18,8 +21,8 @@ project "cactus"
    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
    files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
-   includedirs { "%{prj.name}/src", "%{prj.name}/third-party-libs/spdlog/include", "%{IncludeDir.glfw}" }
-   links { "glfw", "opengl32.lib" }
+   includedirs { "%{prj.name}/src", "%{IncludeDir.spdlog}", "%{IncludeDir.glfw}", "%{IncludeDir.glad}" }
+   links { "glfw", "glad", "opengl32.lib" }
    pchheader "cactuspch.h"
    pchsource "%{prj.name}/src/cactuspch.cpp"
 
@@ -28,7 +31,7 @@ project "cactus"
       cppdialect "C++17"
       staticruntime "On"
       systemversion "latest"
-      defines { "CACTUS_WINDOWS_PLATFORM" }
+      defines { "CACTUS_WINDOWS_PLATFORM", "GLFW_INCLUDE_NONE" }
 
    filter "configurations:debug"
       defines "CACTUS_DEBUG"
@@ -53,7 +56,7 @@ project "blockits"
    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
    files { "%{prj.name}/src/**.h", "%{prj.name}/src/**.cpp" }
-   includedirs { "cactus/src", "cactus/third-party-libs/spdlog/include" }
+   includedirs { "cactus/src", "%{IncludeDir.spdlog}" }
    links { "cactus" }
 
    filter "system:windows"

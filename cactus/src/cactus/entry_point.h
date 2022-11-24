@@ -4,7 +4,7 @@
 
 extern cactus::application* cactus::create_application();
 
-int main(int argc, char**argv) {
+int main(int argc, char**argv) {	
 	auto app = cactus::create_application();
 	app->run();
 	delete app;

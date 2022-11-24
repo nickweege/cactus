@@ -3,6 +3,7 @@
 #include "cactus/events/application_event.h"
 #include "cactus/events/key_event.h"
 #include "cactus/events/mouse_event.h"
+#include "glad/glad.h"
 
 namespace cactus {
 
@@ -29,6 +30,10 @@ namespace cactus {
 
 		m_window = glfwCreateWindow((int)props.width, (int)props.height, m_data.title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_window);
+
+		int ststus = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		CACTUS_CORE_ASSERT(status, "could not initialize glad");
+
 		glfwSetWindowUserPointer(m_window, &m_data);
 		set_vsync(true);
 
