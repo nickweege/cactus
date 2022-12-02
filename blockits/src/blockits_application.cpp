@@ -11,6 +11,7 @@ class blockits_application : public cactus::application {
 public:
 	blockits_application() {
 		push_layer(new layer_example());
+		push_overlay(new cactus::imgui_layer());
 	}
 
 	~blockits_application() {}

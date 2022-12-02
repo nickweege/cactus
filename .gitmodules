@@ -4,3 +4,6 @@
 [submodule "cactus/third-party-libs/glfw"]
 	path = cactus/third-party-libs/glfw
 	url = https://github.com/nickweege/glfw
+[submodule "cactus/third-party-libs/imgui"]
+	path = cactus/third-party-libs/imgui
+	url = https://github.com/nickweege/imgui

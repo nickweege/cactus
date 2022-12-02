@@ -77,7 +77,7 @@
       <PrecompiledHeaderFile>cactuspch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CACTUS_WINDOWS_PLATFORM;GLFW_INCLUDE_NONE;CACTUS_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;third-party-libs\spdlog\include;third-party-libs\glfw\include;third-party-libs\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;third-party-libs\spdlog\include;third-party-libs\glfw\include;third-party-libs\glad\include;third-party-libs\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -98,7 +98,7 @@
       <PrecompiledHeaderFile>cactuspch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CACTUS_WINDOWS_PLATFORM;GLFW_INCLUDE_NONE;CACTUS_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;third-party-libs\spdlog\include;third-party-libs\glfw\include;third-party-libs\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;third-party-libs\spdlog\include;third-party-libs\glfw\include;third-party-libs\glad\include;third-party-libs\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -123,7 +123,7 @@
       <PrecompiledHeaderFile>cactuspch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>CACTUS_WINDOWS_PLATFORM;GLFW_INCLUDE_NONE;CACTUS_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;third-party-libs\spdlog\include;third-party-libs\glfw\include;third-party-libs\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;third-party-libs\spdlog\include;third-party-libs\glfw\include;third-party-libs\glad\include;third-party-libs\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -151,21 +151,25 @@
     <ClInclude Include="src\cactus\events\event.h" />
     <ClInclude Include="src\cactus\events\key_event.h" />
     <ClInclude Include="src\cactus\events\mouse_event.h" />
+    <ClInclude Include="src\cactus\imgui\imgui_layer.h" />
     <ClInclude Include="src\cactus\layer.h" />
     <ClInclude Include="src\cactus\layer_stack.h" />
     <ClInclude Include="src\cactus\log.h" />
     <ClInclude Include="src\cactus\window.h" />
     <ClInclude Include="src\cactuspch.h" />
+    <ClInclude Include="src\platform\opengl\imgui_opengl_renderer.h" />
     <ClInclude Include="src\platform\windows\windows_window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\cactus\application.cpp" />
+    <ClCompile Include="src\cactus\imgui\imgui_layer.cpp" />
     <ClCompile Include="src\cactus\layer.cpp" />
     <ClCompile Include="src\cactus\layer_stack.cpp" />
     <ClCompile Include="src\cactus\log.cpp" />
     <ClCompile Include="src\cactuspch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\platform\opengl\imgui_opengl_renderer.cpp" />
     <ClCompile Include="src\platform\windows\windows_window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +178,9 @@
     </ProjectReference>
     <ProjectReference Include="third-party-libs\glad\glad.vcxproj">
       <Project>{DD62977C-C999-980D-7286-7E105E9C140F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="third-party-libs\imgui\imgui.vcxproj">
+      <Project>{0098A80F-6CAC-D0C0-352E-7420A101CDF1}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
