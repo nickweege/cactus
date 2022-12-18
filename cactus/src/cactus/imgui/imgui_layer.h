@@ -1,6 +1,7 @@
 #pragma once
 
 #include "cactus/layer.h"
+#include "cactus/events/mouse_event.h"
 
 namespace cactus {
 
@@ -13,6 +14,8 @@ namespace cactus {
 		void on_update() override;
 		void on_event(event& event) override;
 	private:
+		bool mouse_pressed_event(mouse_button_pressed_event& event);
+
 		float m_time = 0.0f;
 	};
 }

@@ -40,10 +40,18 @@ namespace cactus {
 
 		static bool show = true;
 		ImGui::ShowDemoWindow(&show);
+		ImGui::ShowStyleEditor(&ImGui::GetStyle());
 
 		ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 	}
 
-	void imgui_layer::on_event(event& event) {}
+	void imgui_layer::on_event(event& event) {
+		event_dispatcher dispatcher(event);
+		dispatcher.dispatch<mouse_button_pressed_event>(CACTUS_BIND_EVENT_FN(imgui_layer::mouse_pressed_event));
+	}
+
+	bool imgui_layer::mouse_pressed_event(mouse_button_pressed_event& event) {
+		return true;
+	}
 }

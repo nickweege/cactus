@@ -5,7 +5,7 @@
 
 namespace cactus {
 
-#define CACTUS_BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
+// #define CACTUS_BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
 
 	application* application::s_instance = nullptr;
 
@@ -29,6 +29,8 @@ namespace cactus {
 			(*--it)->on_event(event);
 			if (event.m_handled) break;
 		}
+
+		// CACTUS_CORE_TRACE(event);
 	}
 
 	void application::run() {
